@@ -1,9 +1,9 @@
 body{
 	margin: 2%;
 	background-color: #16173d;
-	text-align: justify-all;
+	text-align: justify;
 	}
-
+/*head*/
 header{
 	background-image: url("img/moonban.jpg");
 	width: auto;
@@ -20,11 +20,29 @@ nav{
 
 a{
 	text-decoration: none;
+	font-family: 'Lato', sans-serif;
 	font-size: 18px;
 }
 
+/*divs and sections*/
 .secbody{
 
 	background-color: rgba(216,0239, 240, 0.5);
 	padding: 4%;
+}
+
+.secside{
+	background-color: rgba(216,0239, 240, 0.5);
+	padding: 7%;
+}
+
+/*text*/
+h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+}
+
+p{
+	font-family: 'Lora', serif;
+	font-size: 15px;
 }
