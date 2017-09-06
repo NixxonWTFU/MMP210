@@ -22,6 +22,20 @@ a{
 	text-decoration: none;
 	font-family: 'Lato', sans-serif;
 	font-size: 18px;
+	color: 
+}
+
+a:hover{
+	background-color: transparent;
+	color: #CACBE9;
+}
+
+a:active{
+
+}
+
+a:visited{
+
 }
 
 /*divs and sections*/
