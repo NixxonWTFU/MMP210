@@ -1,6 +1,6 @@
 body{
-	
-	background-color: #020314;
+	margin-bottom: 5%;
+	background-color: #010C18;
 	text-align: center;
 	}
 
@@ -18,7 +18,7 @@ header{
 
 .navi{
     text-align: center;
-	background-color: #262f61;
+	background-color: #3B6597;
 	width: auto;
 	box-sizing: border-box;
 	border:none;
@@ -39,34 +39,34 @@ header{
 }
 
 .navi li a:link{
-	background-color:#262f61;
-	color:#4C65CD; 
+	background-color:#3B6597;
+	color:#8AA9CF; 
 }
 
 .navi li a:hover{
-	background-color:#262f61;
+	background-color:#3B6597;
 	color:#94A5ED;
 }
 
 .navi li a:active{
-	background-color:#262f61;
+	background-color:#3B6597;
 	color:#2E49B8;
 }
 
 .navi li a:visited{
-	background-color:#262f61;
+	background-color:#3B6597;
 	color:#0A0F27;
 }
 
 /*divs and sections*/
 .secbody{
 
-	background-color: rgba(216,0239, 240, 0.5);
+	background-color: rgba(138, 169, 207, 0.5);
 	padding: 4%;
 }
 
 .secside{
-	background-color: rgba(216,0239, 240, 0.5);
+	background-color: rgba(138, 169, 207, 0.5);
 	padding: 7%;
 }
 
@@ -80,4 +80,5 @@ p{
 	font-family: 'Lora', serif;
 	font-size: 15px;
 	text-align: justify;
+	color: #000000;
 }
