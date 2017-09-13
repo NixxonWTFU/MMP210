@@ -1,14 +1,18 @@
 body{
-	margin: 2%;
-	background-color: #16173d;
-	text-align: justify;
+	
+	background-color: #020314;
+	text-align: center;
 	}
+
+
 /*head*/
 header{
-	background-image: url("img/moonban.jpg");
+	background-image: url("img/sky.png");
 	width: auto;
-	height: 200px;
+	height: 300px;
 	margin-bottom: 2%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 /*NAVI*/
 
@@ -75,4 +79,5 @@ h1{
 p{
 	font-family: 'Lora', serif;
 	font-size: 15px;
+	text-align: justify;
 }
