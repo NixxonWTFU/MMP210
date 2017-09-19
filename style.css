@@ -1,7 +1,6 @@
 body{
 	margin-bottom: 5%;
 	background-color: #010C18;
-	text-align: center;
 	}
 
 
@@ -81,4 +80,9 @@ p{
 	font-size: 15px;
 	text-align: justify;
 	color: #000000;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
 }

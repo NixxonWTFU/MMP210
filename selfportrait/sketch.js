@@ -4,6 +4,7 @@ function setup() {
     var black = color("#000000");
     var white = color("#ffffff");
     var blue = color("blue");
+    
 
     background(0);
 
