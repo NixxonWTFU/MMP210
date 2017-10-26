@@ -127,7 +127,7 @@ function design() {
     		quad(x+60, y+65, x+70, y+60, x+80, y+65, x+70, y+70);
 
     	    } else if (choice < 4) {
-    	    //PUMPKIN 2
+    	    //PUMPKIN 2 ========================================
 
     	    var r = random(220, 255);
 		  	var g = random(60, 90);
@@ -149,7 +149,7 @@ function design() {
 
     	    }else if (choice < 5) {
 
-    	    	//SKULL
+    	    	//SKULL ============================================
     	    	var r = random(150, 230);
 		 		var g = random(100, 200);
 		  		var b = random(100, 150);
@@ -178,7 +178,7 @@ function design() {
 
     	    	
     	    } else {
-    	    	//BAT
+    	    	//BAT ==============================================
 
     	    	var r = random(0, 20);
 		  		var g = random(0, 0);
@@ -201,6 +201,7 @@ function design() {
     	    	triangle(x+80, y+59, x+100, y+59, x+100, y+85);
     	    	triangle(x+100, y+59, x+120, y+59, x+120, y+85);
     	    }
+            
 
 
 
