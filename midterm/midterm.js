@@ -1,5 +1,5 @@
 function setup() {
-	createCanvas(1000, 550);
+	createCanvas(1100, 500);
 	
 	design();
 
@@ -8,7 +8,11 @@ function setup() {
 function design() {
 
 	//BACKGROUND=======================================
-    background(0);
+    	var r = random(0, 100);
+		var g = random(0, 40);
+		var b = random(0, 80);
+
+    background(r, g, b);
     var columnNum = 10;
 	var columnSize = width/columnNum;
 
@@ -16,9 +20,9 @@ function design() {
 	for (var a = 0; a <= width; a += columnSize) {
 	
 
-		  var r = random(130, 170);
+		  var r = random(100, 170);
 		  var g = random(0, 40);
-		  var b = random(140, 170);
+		  var b = random(100, 170);
 
 		  fill(r, g , b);
 		  noStroke();
@@ -29,7 +33,7 @@ function design() {
 
 	//SHAPES====================================
 
-	var numb = 22;
+	var numb = 15;
     var columns = Math.sqrt(numb);
     var rows = columns;
 	var sW = width/columns;
@@ -38,13 +42,14 @@ function design() {
 
 
     //GHOST======================================
-    for(var x = 10; x < width; x += sW) {
-        for (var y = 10; y < height; y += sH) {
+    for(var x = 5; x < width; x += sW/2) {
+        for (var y = 5; y < height; y += sH) {
 
-        if(random(1) > 0.5) {
-		  var r = random(150, 190);
-		  var g = random(160, 200);
-		  var b = random(200, 240);
+        var choice = random(6);
+        if(choice < 1) {
+		  var r = random(50, 190);
+		  var g = random(70, 200);
+		  var b = random(180, 240);
 
 		  fill(r, g , b);
 		  noStroke();
@@ -63,12 +68,12 @@ function design() {
 
 	       //mouth
 	       arc(x+40, y+60, 10, 10, PI, 0);
-	   } else {
+	   } else if(choice < 2) {
 
 	      //monster
-	   	  var r = random(0, 60);
-		  var g = random(140, 180);
-		  var b = random(0, 20);
+	   	  var r = random(0, 100);
+		  var g = random(120, 180);
+		  var b = random(0, 50);
 
 		  fill(r, g, b);
 		  noStroke();
@@ -99,30 +104,30 @@ function design() {
 	   }
 
 	      //PUMPKIN========================================
-	      for (var i = x+95; i < width; i+=sW) {
-    		for (var k = y; k < height; k+=sH) {
 
-    	  if(random(1) > 0.5) {
-    		var r = random(200, 255);
+    	  else if(choice < 3) {
+    		var r = random(180, 250);
 		  	var g = random(70, 140);
 		  	var b = random(0, 40);
     		fill(r, g, b);
     		noStroke();
 
-    		ellipse(i+30, k+50, 50, 60);
-    		ellipse(i+50, k+50, 80, 70);
-    		ellipse(i+70, k+50, 50, 60);
+    		ellipse(x+30, y+50, 50, 60);
+    		ellipse(x+50, y+50, 80, 70);
+    		ellipse(x+70, y+50, 50, 60);
 
     		fill(0);
     		//eyes
-    		triangle(i+20, k+40, i+40, k+50, i+25, k+50);
-    		triangle(i+60, k+50, i+80, k+40, i+75, k+50);
+    		triangle(x+20, y+40, x+40, y+50, x+25, y+50);
+    		triangle(x+60, y+50, x+80, y+40, x+75, y+50);
 
     		//mouth 
-    		quad(i+20, k+65, i+30, k+60, i+40, k+65, i+30, k+70);
-    		quad(i+40, k+65, i+50, k+60, i+60, k+65, i+50, k+70);
-    		quad(i+60, k+65, i+70, k+60, i+80, k+65, i+70, k+70);
-    	    } else {
+    		quad(x+20, y+65, x+30, y+60, x+40, y+65, x+30, y+70);
+    		quad(x+40, y+65, x+50, y+60, x+60, y+65, x+50, y+70);
+    		quad(x+60, y+65, x+70, y+60, x+80, y+65, x+70, y+70);
+
+    	    } else if (choice < 4) {
+    	    //PUMPKIN 2
 
     	    var r = random(220, 255);
 		  	var g = random(60, 90);
@@ -130,24 +135,77 @@ function design() {
     		fill(r, g, b);
     		noStroke();
 
-    		ellipse(i+30, k+50, 50, 60);
-    		ellipse(i+50, k+50, 80, 70);
-    		ellipse(i+70, k+50, 50, 60);
+    		ellipse(x+30, y+50, 50, 60);
+    		ellipse(x+50, y+50, 80, 70);
+    		ellipse(x+70, y+50, 50, 60);
 
     		fill(0);
     	    //eyes
-    	    ellipse(i+30, k+45, 20, 20);
-    		ellipse(i+70, k+45, 20, 20);
+    	    ellipse(x+30, y+45, 20, 20);
+    		ellipse(x+70, y+45, 20, 20);
 
     		//mouth 
-    		arc(i+50, k+60, 15, 15, 0, PI);
+    		arc(x+50, y+60, 15, 15, 0, PI);
+
+    	    }else if (choice < 5) {
+
+    	    	//SKULL
+    	    	var r = random(150, 230);
+		 		var g = random(100, 200);
+		  		var b = random(100, 150);
+
+		  		fill(r, g , b);
+		  		noStroke();
+
+    	    	ellipse(x+45, y+45, 80, 80);
+    	    	rect(x+20, y+60, 50, 40, 10);
+
+    	    	//eyes
+    	    	fill(0);
+    	    	arc(x+35, y+40, 40, 40, HALF_PI, PI);
+		 		arc(x+55, y+40, 40, 40, 0, HALF_PI);
+
+		 		//nose
+		 		triangle(x+45, y+60, x+40, y+75, x+50, y+75);
+
+    	    	//teeth
+    	    	stroke(0);
+    	    	strokeWeight(3);
+    	    	line(x+30, y+85, x+30, y+100);
+    	    	line(x+40, y+85, x+40, y+100);
+    	    	line(x+50, y+85, x+50, y+100);
+    	    	line(x+60, y+85, x+60, y+100);
+
+    	    	
+    	    } else {
+    	    	//BAT
+
+    	    	var r = random(0, 20);
+		  		var g = random(0, 0);
+		  		var b = random(0, 30);
+
+		  		fill(r, g , b);
+		  		noStroke();
+    	    	
+    	    	triangle(x+40, y+20, x+80, y+20, x+60, y+100);
+    	    	triangle(x+40, y+21, x+60, y+21, x+50, y+5);
+    	    	triangle(x+60, y+21, x+80, y+21, x+70, y+5);
+    	    	//wings
+    	    	arc(x+30, y+60, 60, 60, PI, 0);
+    	    	triangle(x, y+59, x+20, y+59, x, y+85);
+    	    	triangle(x+20, y+59, x+40, y+59, x+20, y+85);
+    	    	triangle(x+40, y+59, x+60, y+59, x+40, y+85);
+
+    	    	arc(x+90, y+60, 60, 60, PI, 0);
+    	    	triangle(x+60, y+59, x+80, y+59, x+80, y+85);
+    	    	triangle(x+80, y+59, x+100, y+59, x+100, y+85);
+    	    	triangle(x+100, y+59, x+120, y+59, x+120, y+85);
     	    }
 
-    	//END================    
-    	}
 
-    	
-    }
+
+    	//END================    
+ 
         }
     }
 
