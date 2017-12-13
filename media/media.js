@@ -1,30 +1,41 @@
-var jump;
+var popSound;
+var speedX = 5;
+var speedY = 2;
 var x = 0;
 var y = 0;
-var speedX = 5;
-var speedY = 5;
 
 function preload() {
-	jump = loadSound("jump.wav");
+	popSound = loadSound('pop.mp3');
 }
 
 function setup() {
-	createCanvas(600, 600);
+	createCanvas(400, 400);
 	noStroke();
-
+    fill(255);
 }
 
 function draw() {
-	background(50);
+    
+    var r = random(0,250);
+    var g = random(0, 250);
+    var b = random(0, 250);
+	background(0);
 
-	fill(255);
-	ellipse(x, y, 50);
+	ellipse(x, y, 60);
 
-	if(x > width || x < 0) {
-		speedX *= -1;
+	if (x > width || x < 0) {
+	speedX *= -1;
+    fill(r, g, b);
+	popSound.play();
+       
 	}
-}
 
-function mousePressed() {
-	jump play();
+	if (y > height || y < 0) {
+	speedY *= -1;
+    fill(r, g, b);
+	popSound.play();
+	}
+
+	x +=speedX;
+	y +=speedY;
 }
