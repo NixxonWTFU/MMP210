@@ -18,6 +18,7 @@ header{
 }
 /*NAVI*/
 
+
 .navi{
     text-align: center;
 	background-color: #43B8C8;
@@ -59,6 +60,10 @@ header{
 .navi li a:visited{
 	background: none;
 	color:#FFFFFF;
+}
+
+.homenavi{
+    margin-bottom:5%;
 }
 
 /*divs and sections*/

@@ -26,7 +26,7 @@ function setup() {
 
 function draw() {
     
-    text("j a v a s c r i p t", 200, 300);
+    text("j a v a s c r i p t", width/6, height/2);
     textSize(120);
     stroke(255);
 	design();
