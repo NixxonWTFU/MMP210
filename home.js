@@ -18,7 +18,7 @@ function setup() {
 		fallY.push(y);
 		var size = random(50, 80);
 		fallSz.push(size);
-		fallSpd.push(random(3, 10));
+		fallSpd.push(random(5, 10));
 
 		}
 
